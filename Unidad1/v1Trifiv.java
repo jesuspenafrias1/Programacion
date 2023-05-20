@@ -23,11 +23,11 @@ public class v1Trifiv {
         if(mul3==0){
             System.out.println("tri");
         }
-                if(mul5==0){
+        if(mul5==0){
             System.out.println("fiv");
         }
         
-                        if(mul3 % 3 == 0 && mul5 % 5 == 0){
+       if(mul3 % 3 == 0 && mul5 % 5 == 0){
             System.out.println("trifiv");
         }
     }
