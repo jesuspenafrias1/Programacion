@@ -9,21 +9,19 @@ import java.util.Scanner;
 
 public class ResolverOperaciones {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
         double resultadoA = resolverOperacionA();
-        System.out.println("Resultado a) 3/2 + 4/3 = " + resultadoA);
+        System.out.printf("Resultado a) 3/2 + 4/3 = %.2f%n", resultadoA);
 
         double x = obtenerValorVariable("x");
         double y = obtenerValorVariable("y");
         double resultadoB = resolverOperacionB(x, y);
-        System.out.println("Resultado b) 1/(x-5) - 3xy/4 = " + resultadoB);
+        System.out.printf("Resultado b) 1/(x-5) - 3xy/4 = %.2f%n", resultadoB);
 
         double resultadoC = resolverOperacionC();
-        System.out.println("Resultado c) 1/2 + 7 = " + resultadoC);
+        System.out.printf("Resultado c) 1/2 + 7 = %.2f%n", resultadoC);
 
         double resultadoD = resolverOperacionD();
-        System.out.println("Resultado d) 7 + 1/2 = " + resultadoD);
+        System.out.printf("Resultado d) 7 + 1/2 = %.2f%n", resultadoD);
 
         double a = obtenerValorVariable("a");
         double b = obtenerValorVariable("b");
@@ -36,33 +34,40 @@ public class ResolverOperaciones {
         double j = obtenerValorVariable("j");
 
         double resultadoE = resolverOperacionE(a, b, c, d, e, f, g, h, j);
-        System.out.println("Resultado e) (a^2/(b-c)) + ((d-e)/(f-(g*h)/j)) = " + resultadoE);
+        System.out.printf("Resultado e) (a^2/(b-c)) + ((d-e)/(f-(g*h)/j)) = %.2f%n", resultadoE);
 
         double m = obtenerValorVariable("m");
         double n = obtenerValorVariable("n");
         double p = obtenerValorVariable("p");
 
         double resultadoF = resolverOperacionF(m, n, p);
-        System.out.println("Resultado f) m/n + p = " + resultadoF);
+        System.out.printf("Resultado f) m/n + p = %.2f%n", resultadoF);
 
         double resultadoG = resolverOperacionG(m, n, p);
-        System.out.println("Resultado g) (m+n)/(p-q) = " + resultadoG);
+        System.out.printf("Resultado g) (m+n)/(p-q) = %.2f%n", resultadoG);
 
         double resultadoH = resolverOperacionH(a, b, c, d);
-        System.out.println("Resultado h) (a^2/b^2) + (c^2/d^2) = " + resultadoH);
+        System.out.printf("Resultado h) (a^2/b^2) + (c^2/d^2) = %.2f%n", resultadoH);
 
         double q = obtenerValorVariable("q");
         double r = obtenerValorVariable("r");
         double s = obtenerValorVariable("s");
 
         double resultadoI = resolverOperacionI(m, n, p, q, r, s);
-        System.out.println("Resultado i) (m+n)/(q-p/(r/s)) = " + resultadoI);
+        System.out.printf("Resultado i) (m+n)/(q-p/(r/s)) = %.2f%n", resultadoI);
 
         double resultadoJ = resolverOperacionJ(a, b, c, d, e, f, g, h);
-        System.out.println("Resultado j) (3a+b)/(c-(d+5e)/(f*g/2h)) = " + resultadoJ);
+        System.out.printf("Resultado j) (3a+b)/(c-(d+5e)/(f*g/2h)) = %.2f%n", resultadoJ);
 
         double resultadoK = resolverOperacionK(a, b, x);
-        System.out.println("Resultado k) (a^2+2ab+b^2)/(1/x^2 + 2) = " + resultadoK);
+        System.out.printf("Resultado k) (a^2+2ab+b^2)/(1/x^2 + 2) = %.2f%n", resultadoK);
+    }
+
+    public static double obtenerValorVariable(String variable) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el valor de " + variable + ": ");
+        double valor = scanner.nextDouble();
+        return valor;
     }
 
     public static double resolverOperacionA() {
@@ -118,13 +123,6 @@ public class ResolverOperaciones {
     public static double resolverOperacionK(double a, double b, double x) {
         double resultado = (Math.pow(a, 2) + 2 * a * b + Math.pow(b, 2)) / (1 / Math.pow(x, 2) + 2);
         return resultado;
-    }
-
-    public static double obtenerValorVariable(String variable) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese el valor de " + variable + ": ");
-        double valor = scanner.nextDouble();
-        return valor;
     }
 }
 
