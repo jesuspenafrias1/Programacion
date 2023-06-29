@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class AplicarDescuento {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el código: ");
+        String codigo = scanner.nextLine();
+
+        System.out.print("Ingrese el precio del artículo: $");
+        double precio = scanner.nextDouble();
+
+        double precioConDescuento = 0.0;
+
+        switch (codigo) {
+            case "DESC10":
+                precioConDescuento = precio * 0.9;
+                break;
+            case "DESC20":
+                precioConDescuento = precio * 0.8;
+                break;
+            case "DESC30":
+                precioConDescuento = precio * 0.7;
+                break;
+            default:
+                System.out.println("Código inválido. No se aplica descuento.");
+                return;
+        }
+
+        System.out.println("Precio original: $" + precio);
+        System.out.println("Precio con descuento: $" + precioConDescuento);
+    }
+}
