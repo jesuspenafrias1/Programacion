@@ -28,10 +28,6 @@ public class ProgramSelector {
     }
     
     public static void ejecutarProgramaCalificaciones() {
-        import java.util.Scanner;
-
-public class Calificaciones {
-    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingresa la calificación: ");
         int calificacion = scanner.nextInt();
@@ -70,10 +66,6 @@ public class Calificaciones {
     }
     
     public static void ejecutarProgramaCajeroAutomatico() {
-        import java.util.Scanner;
-
-public class CajeroAutomatico {
-    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double saldo = 15,000.0;
         
@@ -113,16 +105,12 @@ public class CajeroAutomatico {
             }
         }
     }
-}
+
         System.out.println("Ejecutando programa de cajero automático...");
     }
     
     public static void ejecutarProgramaDescuento() {
-        import java.util.Scanner;
-
-public class AplicarDescuento {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el código: ");
         String codigo = scanner.nextLine();
 
@@ -149,7 +137,6 @@ public class AplicarDescuento {
         System.out.println("Precio original: $" + precio);
         System.out.println("Precio con descuento: $" + precioConDescuento);
     }
-}
         System.out.println("Ejecutando programa de descuento...");
     }
 }
